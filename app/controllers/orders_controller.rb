@@ -5,8 +5,8 @@ class OrdersController < ApplicationController
 
   def new
     @order = Order.new
-    @order.ordered_lists.build
-    @items = Item.lock.all.order(:created_at)
+    @order.ordered_lists.lock.build
+    @items = Item.all.order(:created_at)
   end
 
   def create
