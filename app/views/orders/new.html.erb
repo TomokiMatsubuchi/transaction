@@ -20,7 +20,7 @@
       </tr>
     </thead>
     <tbody>
-    <% @items.lock.each do |item| %>
+    <% @items.each do |item| %>
       <%= form.fields_for(:ordered_lists) do |f| %>
         <tr>
           <td><%= item.name %></td>
